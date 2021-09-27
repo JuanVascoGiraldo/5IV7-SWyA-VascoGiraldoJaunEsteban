@@ -4,33 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo Cesar</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" href="./css/masterstyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <script>
+        function ocultarpanel1(){
+            document.getElementById("div1").style.display = "none";
+            document.getElementById("div2").style.display = "grid";
+        }
+        function ocultarpanel2(){
+            document.getElementById("div2").style.display = "none";
+            document.getElementById("div1").style.display = "grid";
+        }
+    </script>
 </head>
 <body>
-    Este es un ejemplo para poder cifrar un texto con el algoritmo de césar.
-    P.D. tengo sueñito
-
-    Tarea:
-
-    Voy a querer que no sea constante el desplazamiento y que lo pueda ingresar
-    adentro de un campo de texto, deberan de aplicar la operacion modulo
-    si me paso de 27 letras
-
-    desp  mod 27 
-
-    porque van a agregar la ñ
-    <br>
-    <textarea id="cadena" cols="30" rows="10"></textarea>
-    <br>
-    <input type="number" id="desplazamiento">
-    <br>
-    <p><input type="button" value="Cifrar" onclick="cifrar()" >
-        <input type="button" value="Descifrar" onclick="descifrar()" ></p>
-    <div id="resultado" >
-
-    </div>
-
-    <script src="js/cesar.js" ></script>
+    <header class="header">
+        <div class="cabecera logo-container">
+            Seguridad Web Y Aplicaciones 2021
+            <nav class="navigation">
+                <ul>
+                    <li><button><img src="Multimedia/img1.png" class="imagen" onclick="ocultarpanel2()"></button></a></li>
+                    <li><button><img src="Multimedia/img2.png" class="imagen" onclick="ocultarpanel1()"></button></li>
+                </ul>    
+            </nav>
+        </div>
+    </header> 
+    <section class="main">
+        <div class="maincontainer2" id="div1">
+            <center><h1>Vasco Giraldo Juan Esteban</h1></center>
+            <img src="./Multimedia/Imagenmia.jpg" class="imagenyo">
+            <center><h1>Grupo: 5IV7</h1></center>
+            <center><h1>Sexo: Masculino</h1></center>
+            <center><h1>Desarrollador Back-end</h1></center>
+            <center><h1>Cumpleaños 22 de Diciembre 2003</h1></center>
+            <center><h1>Nacido En Palmira Valle del Cauca Colombia</h1></center>
+            <center><h1>CECyT #9 Juan de Dios Bátiz</h1></center>
+            <center><h1>Tecnologias Usadas</h1></center>
+            <ul class="menu">
+                <li><img src="Multimedia/java.png" class="imagen" ></li>
+                <li><img src="Multimedia/javascript.png" class="imagen" ></li>
+                <li><img src="Multimedia/mysql.png" class="imagen" ></li>
+                <li><img src="Multimedia/python.png" class="imagen" ></li>
+                <li><img src="Multimedia/github.png" class="imagen" ></li>
+            </ul>
+            <center><h1>Ver Trabajos</h1></center>
+            <button><img src="Multimedia/img2.png" class="imagen" onclick="ocultarpanel1()"></button>
+        </div>
+        <div class="maincontainer3" id="div2">
+            <center><h1>Trabajos</h1></center>
+            <table>
+                <tr>
+                    <td>Cifrado Cesar</td>
+                    <td><a href="./CifradoCesar/index.html"> <img src="Multimedia/internet.png" class="imagen"></a></td>
+                </tr>
+            </table>
+        </div>
+    </section>
 </body>
 </html>

@@ -66,11 +66,12 @@ var cesar = cesar || (function(){
 function cifrar(){
     var desplazamiento = document.getElementById("desplazamiento").value;
     var numeros = (/([0-9]*)/);
-    alert(numeros.test(desplazamiento));
-    if(numeros.test(desplazamiento)){
+    if(numeros.test(desplazamiento) && desplazamiento.length != 0){
         numero = parseInt(desplazamiento) % 27;
         document.getElementById("resultado").innerHTML =
         cesar.encode(document.getElementById("cadena").value, numero);
+    }else{
+        alert("Ingresa un Desplazamiento")
     }
     
 }
@@ -80,9 +81,11 @@ function cifrar(){
 function descifrar(){
     var desplazamiento = document.getElementById("desplazamiento").value;
     var numeros = (/([0-9]*)/);
-    if(numeros.test(desplazamiento)){
-        numero = parseInt(desplazamiento) % 26;
+    if(numeros.test(desplazamiento) && desplazamiento.length != 0){
+        numero = parseInt(desplazamiento) % 27;
         document.getElementById("resultado").innerHTML =
         cesar.decode(document.getElementById("cadena").value, numero);
+    }else{
+        alert("Ingresa un Desplazamiento")
     }
 }
