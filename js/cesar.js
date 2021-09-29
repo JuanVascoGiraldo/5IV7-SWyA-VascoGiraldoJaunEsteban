@@ -79,12 +79,12 @@ function cifrar(){
 //funcion de descifrado
 
 function descifrar(){
-    var desplazamiento = document.getElementById("desplazamiento").value;
+    var desplazamiento = document.getElementById("desplazamiento1").value;
     var numeros = (/([0-9]*)/);
     if(numeros.test(desplazamiento) && desplazamiento.length != 0){
         numero = parseInt(desplazamiento) % 27;
-        document.getElementById("resultado").innerHTML =
-        cesar.decode(document.getElementById("cadena").value, numero);
+        document.getElementById("resultado1").innerHTML =
+        cesar.decode(document.getElementById("cadena1").value, numero);
     }else{
         alert("Ingresa un Desplazamiento")
     }
